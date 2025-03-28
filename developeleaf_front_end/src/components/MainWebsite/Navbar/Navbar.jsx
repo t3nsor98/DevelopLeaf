@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -9,24 +9,59 @@ const Navbar = () => {
     <nav className="bg-green-700 text-white px-6 py-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive
+              ? "text-yellow-300 underline underline-offset-4 transition text-2xl font-bold"
+              : "hover:text-yellow-300 transition text-2xl font-bold"
+          }
+        >
           Develop<span className="text-yellow-400">Leaf</span>
-        </Link>
+        </NavLink>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          <NavLink to="/home" className={({ isActive }) => (isActive ? "text-yellow-300 underline underline-offset-4 transition" : "hover:text-yellow-300 transition")}>
+          <NavLink
+            to="/home"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-300 underline underline-offset-4 transition"
+                : "hover:text-yellow-300 transition"
+            }
+          >
             Home
           </NavLink>
-          <Link to="/about" className="hover:text-yellow-300 transition">
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-300 underline underline-offset-4 transition"
+                : "hover:text-yellow-300 transition"
+            }
+          >
             About
-          </Link>
-          <Link to="/how-it-works" className="hover:text-yellow-300 transition">
+          </NavLink>
+          <NavLink
+            to="/how-it-works"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-300 underline underline-offset-4 transition"
+                : "hover:text-yellow-300 transition"
+            }
+          >
             How It Works
-          </Link>
-          <Link to="/get-involved" className="hover:text-yellow-300 transition">
+          </NavLink>
+          <NavLink
+            to="/get-involved"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-300 underline underline-offset-4 transition"
+                : "hover:text-yellow-300 transition"
+            }
+          >
             Get Involved
-          </Link>
+          </NavLink>
         </div>
 
         {/* Buttons */}
@@ -51,24 +86,46 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden flex flex-col items-center mt-4 space-y-4">
-          <Link to="/" className="block hover:text-yellow-300 transition">
+          <NavLink
+            to="/home"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-300 underline underline-offset-4 transition"
+                : "hover:text-yellow-300 transition"
+            }
+          >
             Home
-          </Link>
-          <Link to="/about" className="block hover:text-yellow-300 transition">
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-300 underline underline-offset-4 transition"
+                : "hover:text-yellow-300 transition"
+            }
+          >
             About
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/how-it-works"
-            className="block hover:text-yellow-300 transition"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-300 underline underline-offset-4 transition"
+                : "hover:text-yellow-300 transition"
+            }
           >
             How It Works
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/get-involved"
-            className="block hover:text-yellow-300 transition"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-300 underline underline-offset-4 transition"
+                : "hover:text-yellow-300 transition"
+            }
           >
             Get Involved
-          </Link>
+          </NavLink>
           <button className="px-4 py-2 border border-white rounded-md w-full hover:bg-white hover:text-green-700 transition">
             Login
           </button>
