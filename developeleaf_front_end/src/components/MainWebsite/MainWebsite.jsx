@@ -1,10 +1,11 @@
 import React from "react";
+import Navbar from "../Navbar/Navbar";
 
 const MainWebsite = () => {
   return (
-    <div className="h-screen flex items-center justify-center">
-      <h1 className="text-4xl font-bold">Welcome to the Main Website!</h1>
-    </div>
+    <>
+    <Navbar />
+    </>
   );
 };
 
