@@ -40,7 +40,6 @@ const About = () => {
           </p>
         </div>
       </div>
-
       <div className="mt-12 text-center">
         <h3 className="text-3xl font-bold text-green-700 mb-4">
           Join the Movement!
