@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -15,9 +15,9 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          <Link to="/" className="hover:text-yellow-300 transition">
+          <NavLink to="/home" className={({ isActive }) => (isActive ? "text-yellow-300 underline underline-offset-4 transition" : "hover:text-yellow-300 transition")}>
             Home
-          </Link>
+          </NavLink>
           <Link to="/about" className="hover:text-yellow-300 transition">
             About
           </Link>
