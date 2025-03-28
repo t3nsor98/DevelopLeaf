@@ -1,6 +1,7 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="relative h-screen flex items-center justify-center text-center text-white">
       {/* Background Video */}
@@ -16,7 +17,6 @@ const Home = () => {
         poster="/assets/bg_tree_video_home.jpg"
         alt="Background Video"
         title="Background Video"
-        
       ></video>
 
       {/* Overlay */}
@@ -31,7 +31,10 @@ const Home = () => {
           Join us in making the world greener by planting trees and sharing your
           journey.
         </p>
-        <button className="mt-6 shadow-md px-6 lg:px-18 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md transition cursor-pointer">
+        <button
+          onClick={() => navigate("/main")}
+          className="mt-6 shadow-md px-6 lg:px-18 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md transition cursor-pointer"
+        >
           Get Started
         </button>
       </div>
