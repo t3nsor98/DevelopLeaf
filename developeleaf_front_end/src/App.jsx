@@ -11,12 +11,16 @@ import Hero from "./components/MainWebsite/Hero/Hero";
 import About from "./components/MainWebsite/About/About";
 import HowItWorks from "./components/MainWebsite/HowItWorks/HowItWorks";
 import GetInvolved from "./components/MainWebsite/GetInvolved/GetInvolved";
+import Login from "./components/Pages/Login";
+import Signup from "./components/Pages/Signup";
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Hero />} />
         <Route path="/about" element={<About />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
