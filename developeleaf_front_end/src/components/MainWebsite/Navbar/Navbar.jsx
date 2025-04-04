@@ -66,10 +66,10 @@ const Navbar = () => {
 
         {/* Buttons */}
         <div className="hidden md:flex space-x-4">
-          <button className="px-4 py-2 border border-white rounded-md hover:bg-white hover:text-green-700 transition">
+          <button className="px-4 py-2 border border-white rounded-md hover:bg-white hover:text-green-700 transition cursor-pointer">
             Login
           </button>
-          <button className="px-4 py-2 bg-yellow-400 text-green-900 rounded-md hover:bg-yellow-300 transition">
+          <button className="px-4 py-2 bg-yellow-400 text-green-900 rounded-md hover:bg-yellow-300 transition cursor-pointer">
             Sign Up
           </button>
         </div>
@@ -129,7 +129,7 @@ const Navbar = () => {
           <button className="px-4 py-2 border border-white rounded-md w-full hover:bg-white hover:text-green-700 transition">
             Login
           </button>
-          <button className="px-4 py-2 bg-yellow-400 text-green-900 rounded-md w-full hover:bg-yellow-300 transition">
+          <button className="px-4 py-2  bg-yellow-400 text-green-900 rounded-md w-full hover:bg-yellow-300 transition">
             Sign Up
           </button>
         </div>
