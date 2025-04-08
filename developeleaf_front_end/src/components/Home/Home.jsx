@@ -27,7 +27,7 @@ const Home = () => {
         <h1 className="font-knewave text-6xl sm:text-8xl md:text-9xl lg:text-10xl font-bold shadow-md">
           Welcome <br /> to <br /> DevelopLeaf
         </h1>
-        <p className="mt-4 text-lg lg:text-4xl font-semibold shadow-md">
+        <p className="mt-4 text-xl sm:text-4xl font-semibold shadow-md">
           Join us in making the world greener by planting trees and sharing your
           journey.
         </p>
